@@ -13,6 +13,7 @@ export class DataService {
 
   // Get products from json file
 
+
   getProducts() : any {
     return this._http.get(this.url);
   }
