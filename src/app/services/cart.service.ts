@@ -28,7 +28,7 @@ export class CartService {
 
   // Get items and total price
 
-  getCart() {
+  getCart() : any {
     this.cart['total'] = 0;
     this.cart.forEach( product => {
       this.cart['total'] += product.price;
