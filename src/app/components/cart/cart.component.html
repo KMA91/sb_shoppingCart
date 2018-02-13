@@ -1,0 +1,23 @@
+<section class="container-fluid" [ngStyle]="{'display':display}">
+  <div class="cartContents">
+
+    <h1>Your Cart</h1>
+
+    <div *ngIf="cart.length == 0">
+      <h2>Nothing in your cart, start shopping.</h2>
+    </div>
+
+    <div *ngFor="let item of cart" class="row">
+      <img class="col-xs-3" src="../../../assets/productImgs/{{ item.filename }}">
+      <p class="col-xs-3">{{ item.name }}</p>
+      <h4 class="col-xs-3">{{ item.price | currency:'USD' }}</h4>
+      <button (click)=removeItem(item) class="close col-xs-3">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <h3>Total {{ cart.total | currency:'USD' }}</h3>
+    <button (click)="toggleModal()">Back</button>
+
+  </div>
+</section>

@@ -1,0 +1,17 @@
+<nav class="container-fluid navbar navbar-fixed-top">
+  <div class="container navbar navbar-fixed-top">
+
+      <a class="navbar-brand" href="#">
+        Cart.ly
+      </a>
+
+      <ul class="nav navbar-nav">
+        <li><a (click)="toggleModal()">Shop</a></li>
+      </ul>
+
+      <ul class="navbar-text navbar-right" data-toggle="modal" data-target="#bootstrapModel">
+         <a (click)="toggleModal()"> Your Cart <span>{{ cartQty }}</span> </a>
+      </ul>
+
+  </div>
+</nav>

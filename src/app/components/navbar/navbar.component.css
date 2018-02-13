@@ -1,0 +1,21 @@
+.navbar, .nav>li>a:focus, .nav>li>a:hover {
+  background: #0a00d0;
+}
+
+a {
+  color: white;
+}
+
+span {
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+
+a:hover {
+  border-bottom: 1px solid white;
+}
+
+ul {
+  display: inline-block;
+}

@@ -1,0 +1,32 @@
+.container {
+  padding-top: 70px;
+}
+
+.productContent {
+  margin: 8px;
+  padding: 8px;
+  border: 1px solid #d4d4d4;
+}
+
+.productContent:hover {
+  border: 1px solid #0a00d0;
+}
+
+.productContent button:hover {
+  background: #0a00d0;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+}
+
+.col-xs-12, .col-md-3 {
+  text-align: center;
+}
+
+.btn-lg {
+  color: #d4d4d4;
+  border-color: #d4d4d4;
+  background: white;
+}
