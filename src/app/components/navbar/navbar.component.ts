@@ -9,9 +9,9 @@ import { CartService } from '../../services/cart.service';
 })
 export class NavbarComponent implements OnInit {
 
-  private cartQty: number = 0;
-  private subscription: Subscription;
-  display: string = "none";
+  public cartQty: number = 0;
+  public subscription: Subscription;
+  public display: string = "none";
 
   constructor(
     private cartService: CartService
@@ -23,11 +23,11 @@ export class NavbarComponent implements OnInit {
     )
   }
 
-  getCart(){
+  getCart() : any {
     this.cartQty = this.cartService.getNavCartCount()
   }
 
-  toggleModal(){
+  toggleModal() :any {
     this.cartService.toggleModal("toggleModal");
   }
 

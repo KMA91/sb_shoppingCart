@@ -28,7 +28,7 @@ export class CartService {
 
   // Get items and total price
 
-  getCart(){
+  getCart() {
     this.cart['total'] = 0;
     this.cart.forEach( product => {
       this.cart['total'] += product.price;
@@ -38,7 +38,7 @@ export class CartService {
 
   // Get counter
 
-  getNavCartCount(){
+  getNavCartCount() : any {
     return this.cart.length;
   }
 
@@ -48,7 +48,7 @@ export class CartService {
     this.cartMessage.next("making changes to the cart!");
   }
 
-  toggleModal(message){
+  toggleModal(message) :void {
     this.modalMessage.next(message);
   }
 

@@ -16,7 +16,10 @@
       </button>
     </div>
 
-    <h3>Total {{ cart.total | currency:'USD' }}</h3>
+    <div *ngIf="showTotal">
+      <h3>Total {{ cart.total | currency:'USD' }}</h3>
+    </div>
+
     <button (click)="toggleModal()">Back</button>
 
   </div>

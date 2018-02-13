@@ -9,7 +9,7 @@ import { CartService } from '../../services/cart.service';
 })
 export class DashboardComponent implements OnInit {
 
-  private products: any;
+  public products: any;
 
   constructor(
     private dataService: DataService,
@@ -22,7 +22,7 @@ export class DashboardComponent implements OnInit {
 
   // GET PRODUCTS FROM JSON FILE
 
-  getProducts(){
+  getProducts() : any {
     this.dataService.getProducts()
     .subscribe(
       products => {

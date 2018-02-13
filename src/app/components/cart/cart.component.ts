@@ -10,9 +10,14 @@ import { CartService } from '../../services/cart.service';
 })
 export class CartComponent implements OnInit {
 
-  private counter: number = 0;
-  private cart = [];
-  private display: string = "block";
+  public counter: number = 0;
+  public cart = [];
+  public display: string = "block";
+  public total: number;
+
+  // Used to temporarily bypass deployment error
+
+  public showTotal: Boolean = false;
 
   constructor(
     private cartService: CartService
@@ -26,9 +31,10 @@ export class CartComponent implements OnInit {
     this.cartService.cartNotify.subscribe(success =>
       this.getCart()
     )
+    this.showTotal = true;
   }
 
-  toggleModal(){
+  toggleModal() : void {
     if (this.display == "none") {
       this.display="block";
     } else {
@@ -36,11 +42,11 @@ export class CartComponent implements OnInit {
     }
   }
 
-  getCart(){
+  getCart() : any {
     this.cart = this.cartService.getCart();
   }
 
-  removeItem(product){
+  removeItem(product) : any {
     this.cartService.removeProductCart(product);
     this.getCart();
   }
