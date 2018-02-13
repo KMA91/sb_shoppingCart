@@ -23,11 +23,15 @@ export class NavbarComponent implements OnInit {
     )
   }
 
+  // get cart count to show on nav
+
   getCart() : any {
     this.cartQty = this.cartService.getNavCartCount()
   }
 
-  toggleModal() :any {
+  // toggle nav
+
+  toggleModal() : any {
     this.cartService.toggleModal("toggleModal");
   }
 
