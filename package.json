@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "postinstall": "ng build --aot -prod",
+    "postinstall": "echo HELLO HELLO HELLO",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
