@@ -2,14 +2,14 @@
   "name": "Sellbrite Project",
   "version": "1.0.0",
   "license": "MIT",
+  "angular-cli": {},
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build",
+    "postinstall": "ng build --aot -prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod"
+    "e2e": "ng e2e"
   },
   "engines": {
     "node": "8.8.0",
